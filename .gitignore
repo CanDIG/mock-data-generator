@@ -1,0 +1,9 @@
+# data outputs/inputs
+*.json
+*.xlsx
+
+# tier script
+load_tiers.py
+
+# venv
+md_venv/
