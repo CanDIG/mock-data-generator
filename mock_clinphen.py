@@ -243,7 +243,13 @@ def main():
             weight = "" if null_fields else str(random.randint(40, 130)),
             heightUnits = "" if null_fields else "cm",
             weightUnits = "" if null_fields else "kg",
-            performanceStatus = "n/a"
+            performanceStatus = "n/a",
+            siteOfRelapseOrProgression = "n/a",
+            intervalProgressionOrRecurrence = "n/a",
+            intervalRegressionOrDecreaseInDisease = "n/a",
+            levelOfMalignancy = "n/a",
+            treatmentInducedNeoplasmSite = "n/a",
+            dateOfDiagnosisOfTreatmentInducedNeoplasm = "" if null_fields else g_date("2004-01-01","2018-03-31")
             )
 
         # update complication
@@ -292,7 +298,32 @@ def main():
             detailsOfTreatmentPlanImpact = "",
             patientOrFamilyInformedOfGermlineVariant = "",
             patientHasBeenReferredToAHereditaryCancerProgramBasedOnThisMolecularProfiling = "",
-            summaryReport = "" 
+            summaryReport = "",
+            actionableExpressionOutlier = "" if null_fields else random.choice(["4A", "4B", "5A", "5B"]),
+            actionableGermlineVariant = "" if null_fields else random.choice(["3A", "3B", "2A", "Unknown"]),
+            germlineVariantsDrug = "Unknown",
+            germlineVariantsDrugClass = "" if null_fields else random.choice(["Pathogenic", "Actionable", "Likely Pathogenic", "Unknown Significance"]),
+            germlineVariantsDiscussed = "" if null_fields else random.choice(["SDED","MGMT", "MUC1", "SRC2", "ORDS"]),
+            actionableSomaticVariants = "" if null_fields else random.choice(["4A", "4B", "5A", "5B"]),
+            somaticVariantsDrug = "" if null_fields else random.choice(["BRT Inhbitor", "RTK Inhibitor", "FEE Inhibitor", "Other"]),
+            somaticVariantsDrugClass = "" if null_fields else random.choice(["Pathogenic", "Actionable", "Likely Pathogenic", "Unknown Significance"]),
+            somaticVariantsDiscussed = "",
+            anyActionableExpressionOutlier = "" if null_fields else random.choice(["Yes","No"]),
+            expressionDrug = "" if null_fields else random.choice(["BRT Inhbitor", "RTK Inhibitor", "Other", "Other"]),
+            expressionDrugClass = "" if null_fields else random.choice(["Chemotherapy", "RTK Inhibitor", "Other", "Other"]),
+            expressionTypeOfAnalysisUsed = "OncoPanel",
+            expressionTypeOfInformationUtility = "" if null_fields else random.choice(["Useful","Not Useful"]),
+            expressionAlteredGene = "" if null_fields else random.choice(["Transcriptome Pathway","MGMT", "MUC1", "SRC2", "ORDS"]),
+            expressionNonActionableGene = "" if null_fields else random.choice(["N2", "N3", "N4"]),
+            expressionTypeOfAlteration = "" if null_fields else random.choice(["Highly Expressed", "Extreme Outlier/Highly Expressed", "Moderately Expressed"]),
+            anyActionableGermlineVariants = "" if null_fields else random.choice(["Yes","No"]),
+            germlineVariantsTypeOfAnalysisUsed = "OncoPanel",
+            germlineVariantsClassificationOfVariants = "" if null_fields else random.choice(["Pathogenic", "Pathogenic", "Actionable", "Likely Pathogenic", "Unknown Significance"]),
+            germlineVariantsTypeOfInformationUtility = "" if null_fields else random.choice(["Useful","Not Useful", "Unknown"]),
+            anyActionableSomaticVariants = "" if null_fields else random.choice(["Yes","No"]),
+            somaticVariantsTypeOfAnalysisUsed = "OncoPanel",
+            somaticVariantsTypeOfInformationUtility = "" if null_fields else random.choice(["Useful", "Not Useful", "Unknown"]),
+            somaticVariantsNonActionable = "" if null_fields else random.choice(["N1", "N2", "N3"])
             )
 
 additionalModalities = []
