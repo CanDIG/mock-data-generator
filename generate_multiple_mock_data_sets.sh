@@ -18,7 +18,7 @@ if [ $# -eq 2 ]; then
 	max=$1
 	records=$2
 
-	if ! [[ "$max" =~ ^[1-9]+$ ]] || ! [[ "$records" =~ ^[1-9]+$ ]];then
+	if  [[ "$max" -lt 0 ]] ||  [[ "$records" -lt 0 ]];then
 		echo "Please specify a positive integer for both # of datasets and # of records"
 		exit 1
 	fi
@@ -45,7 +45,7 @@ if [ $# -eq 2 ]; then
 		mv "mock_clinphen_1.json" "output/mock_clinphen_${i}.json"
 		mv "mock_pipeline_1.json" "output/mock_pipeline_${i}.json"
 
-		echo -e "${GREEN}SUCCESS: mock clinphen/pipeline datasets #${i} have been printed to the output folder ${NC}\n"
+		echo -e "${GREEN}SUCCESS: mock_clinphen_${i}.json and mock_pipeline_${i}.json have been exported to output/ folder. ${NC}\n"
 	done
 else
 	echo "Usage: <# of datasets to generate> <#records per dataset>"
