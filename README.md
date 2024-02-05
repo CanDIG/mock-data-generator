@@ -1,3 +1,5 @@
+# This repo was archived on Monday 5th February, 2024 as it is no longer compatible with the current version of the CanDIG MoH data model
+
 # mock-data-generator
 
 Python scripts that generate both clinical and corresponding pipeline mock data
