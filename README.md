@@ -1,4 +1,4 @@
-# This repo was archived on Monday 5th February, 2024 as it is no longer compatible with the current version of the CanDIG MoH data model
+# This repo was archived on Monday 5th February, 2024 as it is no longer compatible with the current version of the CanDIG MoH data model. It is no longer maintained or updated
 
 # mock-data-generator
 
